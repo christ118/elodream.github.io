@@ -46,7 +46,8 @@
         {
             font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(15, 15, 15);
-            margin:0
+            margin:0;
+            user-select: none;
         }
         *
         {
@@ -135,36 +136,33 @@
         {
             position: relative;
             padding: 10px 30px;
-            background-color:#21acf7 ;
+            background-color:cyan ;
+            border: 2px solid #01d9ff;
             font-size: 1.4rem;
-            border:none;
+            color: black;
+            cursor: pointer;
+        
             -webkit-clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px,8px 0);
     clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px,8px 0);
     box-shadow: 0 0 150px 10px outset rgb(0, 255, 255);
-z-index: 2;
         }
 
-        .sp::after
+
+        .button:hover
         {
-            content: '';
-            box-shadow: 0 0 150px 10px outset rgb(0, 255, 255);
-            width: 100%;
-            height: 100%;
-        
-            display: block;
-            left: 0;
-    position: absolute;
-    top: 0;
-            z-index: 3;
+            background:linear-gradient(90deg, cyan,#04e0e0);
+           
         }
+    
 
         section
         {
             height: 600px;
-            background-color: #D3D3D3;
+            background-color: #121b24;
             padding: 20px 100Px;
             display: flex;
             justify-content: space-between;
+            color: white;
         }
     </style>
     <header>
@@ -200,8 +198,11 @@ z-index: 2;
 </p>
 
 
-<a class="button"><span class="sp">follow us on github</span></a></div>
+<a class="button"><span style="">follow us on github</span></a>
     
+
+
+</div>
 
 <div style="width: 500px;">
     <h2>want to help elodream ?</h2>
