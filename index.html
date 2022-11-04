@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1
+        {
+            
+            font-size: 4rem;
+            background: -webkit-linear-gradient(0deg,  rgb(8, 218, 218)0%, #48abe0 100%);
+        -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+        p
+        {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        h2
+        {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        header
+        {
+            
+            width: 100%;
+            height: 656px;
+
+        }
+
+        .header-content
+        {
+            height: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(15, 15, 15);
+            margin:0
+        }
+        *
+        {
+            box-sizing: border-box;
+        }
+        :root
+        {
+            --cube-size:300px;
+            --cyan:cyan;
+            --dark:rgb(17, 17, 17);
+        }
+        .cube
+        {
+            width: var(--cube-size);
+            height: var(--cube-size);
+            position: relative;
+            transform-style: preserve-3d;
+            animation: cube-animation 3.5s infinite;
+        }
+
+        @keyframes cube-animation {
+            0%{
+                transform: rotateX(-30deg) rotateY(0);
+            }
+            100%
+            {
+                transform: rotateX(-30deg) rotateY(360deg);
+            }
+        }
+
+        .cube div
+        {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            transform-style: preserve-3d;
+
+        }
+
+        .cube div span
+        {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            background: linear-gradient(var(--dark),var(--cyan) );
+            transform: rotateY(calc(90deg * var(--i))) translateZ(calc(var(--cube-size) / 2));
+        }
+
+        .cube .top
+        {
+            background-color: var(--dark);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        
+        .cube .top::after
+        {
+            background-color: var(--cyan);
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: rotateX(0deg) translateZ(-400px);
+            filter: blur(8px);
+            box-shadow: 0 0 150px  rgb(0, 255, 255),
+            0 0 200px  rgb(0, 255, 255,0.6);;
+
+
+        }
+
+        .sp
+        {
+            box-shadow: 0 0 150px  rgb(0, 255, 255);  
+        }
+
+        .button
+        {
+            position: relative;
+            padding: 10px 30px;
+            background-color:#21acf7 ;
+            font-size: 1.4rem;
+            border:none;
+            -webkit-clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px,8px 0);
+    clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px,8px 0);
+    box-shadow: 0 0 150px 10px outset rgb(0, 255, 255);
+z-index: 2;
+        }
+
+        .sp::after
+        {
+            content: '';
+            box-shadow: 0 0 150px 10px outset rgb(0, 255, 255);
+            width: 100%;
+            height: 100%;
+        
+            display: block;
+            left: 0;
+    position: absolute;
+    top: 0;
+            z-index: 3;
+        }
+
+        section
+        {
+            height: 600px;
+            background-color: #D3D3D3;
+            padding: 20px 100Px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <header>
+        <!-- <span style="color: white; font-size: 2rem;;font-family: Arial, Helvetica, sans-serif; font-weight: 600;">elodream</span> -->
+        <div class="header-content">
+                <div style="width: 500px;">
+            <h1>A new technology just for you</h1>
+        </div>
+        <div>
+                  <div class="cube">
+        <div class="top"></div>
+
+        <div>
+            <span style="--i:0; font-size: 2rem ; color: white;">
+            
+            </span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+        </div>
+    </div>      
+        </div>    
+        </div>
+
+
+    </header>
+<section>
+    <div style="width: 500px;">
+        <h2>Modern enterprise open source</h2>
+<p>
+    Elodream loves opensource With GitHub
+
+</p>
+
+
+<a class="button"><span class="sp">follow us on github</span></a></div>
+    
+
+<div style="width: 500px;">
+    <h2>want to help elodream ?</h2>
+<p>
+
+join ngdream community on discord and work on our projects!
+</p>
+
+
+<a class="button"><span class="sp">support us</span></a></div>
+
+
+</section>
+</body>
+</html>
