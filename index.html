@@ -147,6 +147,46 @@
     box-shadow: 0 0 150px 10px outset rgb(0, 255, 255);
         }
 
+        
+        section
+        {
+            
+            background-color: #121b24;
+            padding: 20px 100Px;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        section>div
+        {
+            width: 100%;
+            padding: 0px 40px;
+        }
+
+
+        @media screen and (max-width: 800px){
+            section
+            {
+                flex-direction: column;
+                
+            }
+            section>div
+        {
+            width: 100%;
+            padding: 20px 0px;
+        }
+        .text
+        {
+            width: 100%;
+         
+        }
+        
+        .cube
+        {
+            display: none;
+        }
+        }
 
         .button:hover
         {
@@ -155,20 +195,11 @@
         }
     
 
-        section
-        {
-            height: 600px;
-            background-color: #121b24;
-            padding: 20px 100Px;
-            display: flex;
-            justify-content: space-between;
-            color: white;
-        }
     </style>
     <header>
         <!-- <span style="color: white; font-size: 2rem;;font-family: Arial, Helvetica, sans-serif; font-weight: 600;">elodream</span> -->
         <div class="header-content">
-                <div style="width: 500px;">
+                <div class="text" style="width: 500px;">
             <h1>A new technology just for you</h1>
         </div>
         <div>
@@ -190,7 +221,7 @@
 
     </header>
 <section>
-    <div style="width: 500px;">
+    <div >
         <h2>Modern enterprise open source</h2>
 <p>
     Elodream loves opensource With GitHub
@@ -204,7 +235,7 @@
 
 </div>
 
-<div style="width: 500px;">
+<div>
     <h2>want to help elodream ?</h2>
 <p>
 
